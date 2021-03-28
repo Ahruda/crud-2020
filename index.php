@@ -7,6 +7,11 @@
 <head>
  	<link rel="stylesheet" href="sweetAlert/dist/sweetalert2.min.css">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<style>
+		body {
+			background-color: #ccccff;
+		}
+	</style>
 </head>
 
 <body>
@@ -19,23 +24,16 @@
 
 			<br><hr><br>
 
-			<div class="row">
-				<div class="col-md-9"></div>
-				<div class="col-md-2">
-					<button class="btn btn-primary" onclick="abreModal()">Novo comentário</button>
+			<div class="card card-form">
+				<div class="card-header">
+					<h2>Comentarios</h2>
+					<button class="btn btn-info float-right" onclick="abreModal()"> + Novo comentário</button>
 				</div>
-				<div class="col-md-1"></div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10" style="border-style: groove;" >
-					<br>
-					<div id="table"></div>
-					<br>
+				<div class="card-body">
+					<div id="table" class="table"></div>
 				</div>
-				<div class="col-md-1"></div>
-			</div>
+        	</div>
+
 
 		</div>	
 
@@ -204,6 +202,7 @@
 			  showCancelButton: true,
 			  confirmButtonColor: '#3085d6',
 			  cancelButtonColor: '#d33',
+			  cancelButtonText: 'Cancelar',
 			  confirmButtonText: 'Sim, excluir isso!'
 			})
 			.then((result) => {

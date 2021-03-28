@@ -1,5 +1,5 @@
 <table width="100%" cellspacing="0" border="1">
-	
+	<thead class="thead-dark">
 	<tr class="colunas" align="center">
 		<th>Código</th>
 		<th>Nome</th>
@@ -7,6 +7,7 @@
 		<th>Alterar</th>
 		<th>Excluir</th>
 	</tr>
+	</thead>
 
 <?php
 
@@ -27,12 +28,12 @@ if (mysqli_num_rows($result) > 0) {
 				
 			</th>
 			<th>
-				<button class="nav-link" onclick="modal_update(<?php echo $row['id'] ?>);">
+				<button class="btn btn-primary" onclick="modal_update(<?php echo $row['id'] ?>);">
 					Alterar
 				</button>
 			</th>
 			<th>
-				<button class="nav-link" onclick="delete_confirmation(<?php echo $row['id'] ?>);">
+				<button class="btn btn-danger" onclick="delete_confirmation(<?php echo $row['id'] ?>);">
 					Excluir
 				</button>
 			</th>
